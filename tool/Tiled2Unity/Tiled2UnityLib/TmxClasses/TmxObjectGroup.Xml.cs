@@ -27,7 +27,7 @@ namespace Tiled2Unity
                           select TmxObject.FromXml(obj, tmxObjectGroup, tmxMap);
 
             // The objects are ordered "visually" by Y position
-            tmxObjectGroup.Objects = objects.OrderBy(o => TmxMath.ObjectPointFToMapSpace(tmxMap, o.Position).Y).ToList();
+            tmxObjectGroup.Objects = objects.ToList();
 
             return tmxObjectGroup;
         }
